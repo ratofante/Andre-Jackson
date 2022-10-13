@@ -1,18 +1,26 @@
 .whatsapp {
 	position: fixed;
-	bottom: 30px;
+	z-index: 1100;
+	bottom: 80px;
 	left: 50%;
 	transform: translateX(-50%);
 
+	@include mq(sm) {
+		bottom: 6%;
+		left: unset;
+		right: 10%;
+		transform: translateX(0%);
+	}
+
 	&-btn {
-		@include flex(row, center, left);
-		padding: 10px 25px;
+		@include flex(row, center, center);
+		padding: 10px 10px;
 		border: 1px solid $clr-gray;
 		border-radius: 25px;
+		width: 175px;
 
 		&-img {
 			width: 20px;
-			margin-right: 10px;
 			& img {
 				width: 100%;
 			}
@@ -21,7 +29,7 @@
 		&-text {
 			display: block;
 			white-space: nowrap;
-			width: 100%;
+			width: 75%;
 			overflow: hidden;
 		}
 	}

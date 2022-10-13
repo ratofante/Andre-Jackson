@@ -11,6 +11,7 @@ class Init {
          opacity: 0,
          zIndex: -100
       });
+      gsap.set('body', { overflow: 'hidden' });
 
       this.tl = gsap.timeline();
 
@@ -111,6 +112,23 @@ class Init {
             y: 30,
             opacity: 0
          }, ">")
+
+         .from('.whatsapp', {
+            duration: 2,
+            ease: 'linear',
+            bottom: '-40px',
+         }, ">").from('.whatsapp-btn', {
+            duration: 1.2,
+            ease: 'linear',
+            width: '50px'
+         }, ">").fromTo('.whatsapp-btn-text', {
+            width: '0%'
+         }, {
+            duration: 1.2,
+            ease: 'linear',
+            width: '75%',
+            onComplete: () => gsap.set('body', { overflow: 'hidden' })
+         }, "<")
 
       // Falta animar botón de whatsapp
 
