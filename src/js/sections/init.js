@@ -116,7 +116,7 @@ class Init {
          .from('.whatsapp', {
             duration: 2,
             ease: 'linear',
-            bottom: '-40px',
+            bottom: '-200px',
          }, ">").from('.whatsapp-btn', {
             duration: 1.2,
             ease: 'linear',
