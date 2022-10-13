@@ -3,9 +3,14 @@
 
 	&-title {
 		position: absolute;
-		z-index: 100;
+		z-index: 110;
 		width: 100%;
-		top: 10vh;
+		top: 100px;
+		color: $clr-yellow;
+
+		@include mq(sm) {
+			top: 10;
+		}
 
 		@include mq(lg) {
 			top: 15vh;
@@ -15,7 +20,7 @@
 			font-size: 46px;
 			text-align: center;
 			@include mq(sm) {
-				font-size: 70px;
+				font-size: 100px;
 			}
 
 			@include mq(lg) {
@@ -41,7 +46,7 @@
 
 		& img {
 			position: absolute;
-			top: 15vh;
+			top: 210px;
 			height: 100%;
 			//transform: translateX(-50%) scale(0.8);
 			left: 50%;

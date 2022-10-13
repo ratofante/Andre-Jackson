@@ -111,10 +111,9 @@ class Init {
             y: 30,
             opacity: 0
          }, ">")
-      // .from('.whatsapp', {
-      //    duration: 
-      // })
-      // polygon(0vw 5vh, 100vw 5vh, 100vw 100vh, 0vw 100vh)
+
+      // Falta animar botón de whatsapp
+
    }
 
 }

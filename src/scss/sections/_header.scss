@@ -4,9 +4,9 @@
 	left: 0;
 	right: 0;
 	z-index: 1000;
+	width: 100vw;
 	@include flex(row, center, space-between);
 	padding: 0px 20px;
-	//margin-top: 20px;
 
 	@include mq(lg) {
 		padding-inline: 45px;

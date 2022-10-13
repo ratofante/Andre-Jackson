@@ -32,14 +32,15 @@
 	}
 
 	&-menu {
-		@include flex(column, flex-start, flex-start);
+		@include flex(column, flex-start, center);
 		height: 100%;
 		width: 100%;
 		padding-top: 40px;
-		padding-left: 20px;
+		padding-left: clamp(20px, 10vw, 100px);
 		background-color: $clr-black;
 
 		@include mq(lg) {
+			justify-content: flex-start;
 			padding-top: 120px;
 			padding-left: 50px;
 		}
