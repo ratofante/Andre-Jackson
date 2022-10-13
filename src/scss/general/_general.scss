@@ -1,0 +1,12 @@
+body {
+	overflow-x: hidden;
+}
+html::-web-kit-scrollbar,
+body::-web-kit-scrollbar {
+	display: none;
+}
+html,
+body {
+	-ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: none; /* Firefox */
+}

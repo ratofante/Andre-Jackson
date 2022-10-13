@@ -1,0 +1,60 @@
+.main-portrait {
+	width: 100vw;
+
+	&-title {
+		position: absolute;
+		z-index: 100;
+		width: 100%;
+		top: 10vh;
+
+		@include mq(lg) {
+			top: 15vh;
+		}
+
+		& h1 {
+			font-size: 46px;
+			text-align: center;
+			@include mq(sm) {
+				font-size: 70px;
+			}
+
+			@include mq(lg) {
+				font-size: 124px;
+			}
+			& span {
+				font-size: 20px;
+			}
+		}
+	}
+
+	&-bg {
+		position: absolute;
+		z-index: 100;
+		top: 0;
+		width: 100%;
+		height: 100vh;
+		clip-path: polygon(10vw 19vh, 90vw 19vh, 90vw 85vh, 10vw 85vh);
+
+		@include mq(sm) {
+			clip-path: polygon(22vw 100vh, 78vw 100vh, 78vw 10vh, 22vw 10vh);
+		}
+
+		& img {
+			position: absolute;
+			top: 15vh;
+			height: 100%;
+			//transform: translateX(-50%) scale(0.8);
+			left: 50%;
+			transform: translateX(-50%);
+			filter: sepia(73%) grayscale(46%);
+
+			@include mq(lg) {
+				top: 36vh;
+				width: 100vw;
+				left: 0;
+				transform: translateX(0%);
+				height: auto;
+			}
+		}
+	}
+}

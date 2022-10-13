@@ -1,0 +1,91 @@
+.navbar {
+	@include flex(row, center, flex-start);
+	position: absolute;
+	transform: translateY(-100%);
+	//transition: transform 1000ms ease-in-out;
+	z-index: 1000;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	padding-top: 0px !important;
+
+	// &.active {
+	// 	transform: translateY(0%);
+	// }
+
+	&-picture {
+		display: none;
+
+		@include mq(lg) {
+			display: block;
+			width: 46vw;
+			overflow: hidden;
+			height: 100vh;
+		}
+
+		& img {
+			width: 148%;
+			transform: translate(-20%, 0%);
+			scale: 1.2;
+		}
+	}
+
+	&-menu {
+		@include flex(column, flex-start, flex-start);
+		height: 100%;
+		width: 100%;
+		padding-top: 40px;
+		padding-left: 20px;
+		background-color: $clr-black;
+
+		@include mq(lg) {
+			padding-top: 120px;
+			padding-left: 50px;
+		}
+		&-lang {
+			@include flex(row, center, flex-start);
+
+			& p {
+				color: $clr-gray;
+
+				&.active {
+					color: $clr-light-gray;
+				}
+			}
+
+			& .dot {
+				width: 5px;
+				height: 5px;
+				border-radius: 50%;
+				margin-inline: 10px;
+				background-color: $clr-light-gray;
+			}
+		}
+
+		&-nav {
+			&-list {
+				padding: 0px;
+				margin-block: 20px 60px;
+			}
+
+			&-link {
+				color: $clr-gray;
+				list-style: none;
+				font-size: 40px;
+
+				& a > span {
+					font-size: 16px;
+				}
+			}
+		}
+
+		&-address {
+			color: $clr-gray;
+
+			& p:first-child {
+				color: $clr-white;
+			}
+		}
+	}
+}

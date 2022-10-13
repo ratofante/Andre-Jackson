@@ -1,0 +1,90 @@
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 1000;
+	@include flex(row, center, space-between);
+	padding: 0px 20px;
+	//margin-top: 20px;
+
+	@include mq(lg) {
+		padding-inline: 45px;
+	}
+
+	& > div {
+		padding-top: 20px;
+
+		@include mq(lg) {
+			padding-top: 60px;
+		}
+	}
+
+	&-lang {
+		&-en {
+			text-transform: capitalize;
+			border: none;
+			background: none;
+			color: $clr-black;
+			font-weight: $fw-bolder;
+			padding: 0px 5px 0px 0px;
+		}
+
+		&-es {
+			@extend .header-lang-en;
+			color: $clr-gray;
+		}
+	}
+
+	&-logo {
+		@include position-center;
+		z-index: 1100;
+		font-family: $ff-special;
+		font-size: 20px;
+
+		&.active {
+			color: $clr-white;
+		}
+	}
+
+	&-menu {
+		position: relative;
+		z-index: 1100;
+		width: 40px;
+
+		& button {
+			cursor: pointer;
+			width: 50px;
+			height: 40px;
+			border: none;
+			background: none;
+			@include flex(column, center, space-evenly);
+
+			& .btn-bar {
+				height: 4px;
+				border-radius: 15px;
+				width: 35px;
+				background-color: $clr-black;
+
+				&:nth-child(1) {
+					transform-origin: left top;
+				}
+
+				&:nth-child(3) {
+					transform-origin: left bottom;
+				}
+
+				&:nth-child(2) {
+					transition: translate 200ms ease-in-out;
+					width: 20px;
+					translate: 6px;
+					background-color: $clr-gray;
+				}
+			}
+
+			&:hover .btn-bar:nth-child(2) {
+				translate: -6px;
+			}
+		}
+	}
+}
